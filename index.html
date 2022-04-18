@@ -38,7 +38,7 @@ p2 {
 <body>
 <input type="hidden" name="user" value="">
 <input type="hidden" name="msg" value="">
-<img id="badgephoto" src="https://internal-cdn.amazon.com/badgephotos.amazon.com/?uid=peccy" alt="badgephoto">
+<img id="badgephoto" src="https://internal-cdn.amazon.com/badgephotos.amazon.com/?uid=" alt="badgephoto">
 
 
 <p id="msgbox">Loading...</p><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -66,7 +66,7 @@ p2 {
     var hiddenFields = document.querySelectorAll("input[type=hidden], input[type=text]");
     for (var i=0; i<hiddenFields.length; i++) {
       var param = sessionStorage.getItem(hiddenFields[i].name);
-      if (param) document.getElementsByName(hiddenFields[i].name)[0].value = param;
+      if (param) document.getElementsByName(hiddenFields[i].name)[0].value = param.replace('+',' ');
     }
   }
 
