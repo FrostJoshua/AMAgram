@@ -78,9 +78,9 @@ var usersrc = "https://internal-cdn.amazon.com/badgephotos.amazon.com/?uid=" + u
 document.getElementById("badgephoto").src=usersrc
 }
 if (document.getElementsByName("msg")[0].value != null){
-  var vmsg = document.getElementsByName("msg")[0].value
-  let vmsg = vmsg.replace("+", " ");
-document.getElementById("msgbox").innerText = vmsg}}, 2000);
+  var lmsg = document.getElementsByName("msg")[0].value
+  var lmsg = lmsg.replace("+", " ");
+document.getElementById("msgbox").innerText = lmsg}}, 2000);
 
 
 
@@ -109,7 +109,7 @@ function copy() {
   var vmsg = document.getElementById("imsg").value
   var fullcopyurl = copyurl1 + vuser.trim() + "&msg=" + encodeURIComponent(vmsg.trim())
   copyTextToClipboard(fullcopyurl);
-  alert("Url Copied, Send your AMAgram URL")
+  alert("URL Copied, Paste and Send your AMAgram URL however you'd like!")
 }
 
 function copyTextToClipboard(text) {
