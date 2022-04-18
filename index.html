@@ -79,7 +79,7 @@ document.getElementById("badgephoto").src=usersrc
 }
 if (document.getElementsByName("msg")[0].value != null){
   var lmsg = document.getElementsByName("msg")[0].value
-  var lmsg = lmsg.replace("+", " ");
+  var lmsg = lmsg.replaceAll("+", " ");
 document.getElementById("msgbox").innerText = lmsg}}, 2000);
 
 
